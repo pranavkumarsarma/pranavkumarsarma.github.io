@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pranav Kumar Sarma R. · Senior QA Engineer, AI &amp; LLM Quality</title>
+<meta name="description" content="Senior QA Engineer with 8+ years testing everything from enterprise ERP, help desks, and CRMs to real-estate AI marketing engines. Manual, automation, API, and LLM evaluation. ISTQB certified." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F4F5F2;
+    --paper-2:#FFFFFF;
+    --paper-3:#FBFCFA;
+    --ink:#15191C;
+    --ink-2:#5C6672;
+    --ink-3:#949CA6;
+    --line:#E5E7E2;
+    --line-2:#EEF0EC;
+    --pass:#17915E;
+    --pass-2:#E7F3EC;
+    --pass-3:#F1F8F3;
+    --warn:#B4791B;
+    --warn-2:#F7F0E0;
+    --shadow-sm:0 1px 2px rgba(20,25,28,.04), 0 1px 1px rgba(20,25,28,.03);
+    --shadow-md:0 12px 32px -12px rgba(20,25,28,.14), 0 2px 6px rgba(20,25,28,.04);
+    --maxw:1120px;
+    --r:14px;
+    --r-sm:10px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--pass);color:#fff}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .mono{font-family:"JetBrains Mono",monospace}
+
+  .eyebrow{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--pass);
+    font-weight:500;
+    display:inline-flex;
+    align-items:center;
+    gap:.55em;
+  }
+  .eyebrow::before{
+    content:"";
+    width:6px;height:6px;border-radius:50%;
+    background:var(--pass);
+    box-shadow:0 0 0 4px var(--pass-2);
+  }
+
+  h2.head{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:700;
+    font-size:clamp(1.9rem,3.6vw,2.7rem);
+    line-height:1.06;
+    letter-spacing:-.02em;
+    margin:.5rem 0 0;
+  }
+  .lede{color:var(--ink-2);max-width:52ch;margin-top:.9rem;font-size:1.05rem}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(244,245,242,.82);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .brand{
+    display:flex;align-items:center;gap:10px;
+    font-family:"JetBrains Mono",monospace;
+    font-weight:600;font-size:.9rem;letter-spacing:.02em;
+  }
+  .status-dot{
+    width:8px;height:8px;border-radius:50%;background:var(--pass);
+    box-shadow:0 0 0 3px var(--pass-2);
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.78rem;color:var(--ink-2);letter-spacing:.02em;
+    transition:color .18s ease;
+  }
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links .nav-cta{
+    color:var(--pass);
+    padding:6px 14px;border:1px solid var(--pass);border-radius:100px;
+    transition:background .18s ease,color .18s ease;
+  }
+  .nav-links .nav-cta:hover{background:var(--pass);color:#fff}
+  @media(max-width:720px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:clamp(56px,9vw,104px) 0 clamp(48px,7vw,84px)}
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+  }
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+
+  .hero h1{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:800;
+    font-size:clamp(2.5rem,6.2vw,4.4rem);
+    line-height:1.0;
+    letter-spacing:-.035em;
+    margin:.9rem 0 0;
+  }
+  .hero .tagline{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:500;
+    font-size:clamp(1.15rem,2.2vw,1.5rem);
+    line-height:1.28;
+    letter-spacing:-.01em;
+    color:var(--ink);
+    margin-top:1.3rem;max-width:20ch;
+  }
+  .hero .tagline em{font-style:normal;color:var(--pass)}
+  .hero .sub{color:var(--ink-2);margin-top:1.15rem;max-width:46ch;font-size:1.03rem}
+
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.9rem}
+  .btn{
+    font-family:"JetBrains Mono",monospace;font-size:.82rem;font-weight:500;
+    padding:12px 20px;border-radius:100px;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:transform .16s ease,background .18s ease,border-color .18s ease,color .18s ease;
+    border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:var(--pass);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-1px)}
+
+  /* run panel: the signature */
+  .runcard{
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    box-shadow:var(--shadow-md);
+    overflow:hidden;
+  }
+  .runcard-bar{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:13px 16px;border-bottom:1px solid var(--line-2);
+    background:var(--paper-3);
+  }
+  .runcard-file{
+    font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--ink-2);
+    display:flex;align-items:center;gap:9px;
+  }
+  .dot-cluster{display:flex;gap:5px}
+  .dot-cluster i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+  .dot-cluster i:first-child{background:var(--pass);opacity:.7}
+  .pass-pill{
+    font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:600;
+    color:var(--pass);background:var(--pass-2);
+    padding:4px 10px;border-radius:100px;letter-spacing:.02em;
+  }
+  .runcard-body{padding:18px 16px 8px}
+  .assert{
+    font-family:"JetBrains Mono",monospace;font-size:.82rem;line-height:1.5;
+    color:var(--ink);
+    display:flex;gap:11px;align-items:baseline;
+    padding:6px 0;
+    opacity:0;transform:translateX(-6px);
+  }
+  .assert.in{opacity:1;transform:none;transition:opacity .4s ease,transform .4s ease}
+  .assert .check{
+    color:var(--pass);font-weight:600;flex:none;width:12px;
+    transform:scale(.4);opacity:0;
+  }
+  .assert.in .check{animation:pop .34s cubic-bezier(.2,1.4,.4,1) forwards}
+  @keyframes pop{to{transform:scale(1);opacity:1}}
+  .assert .code{color:var(--ink-2)}
+  .assert .code b{color:var(--ink);font-weight:600}
+  .assert .code .val{color:var(--pass);font-weight:600}
+  .runcard-foot{
+    border-top:1px solid var(--line-2);margin-top:10px;
+    padding:13px 16px;
+    font-family:"JetBrains Mono",monospace;font-size:.76rem;color:var(--ink-2);
+    display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+  .runcard-foot b{color:var(--pass);font-weight:600}
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section{padding:clamp(60px,8vw,100px) 0;border-top:1px solid var(--line)}
+  .sec-head{max-width:640px;margin-bottom:clamp(32px,5vw,52px)}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- ABOUT / COVERAGE ---------- */
+  .about-body{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:start;
+  }
+  @media(max-width:840px){.about-body{grid-template-columns:1fr;gap:38px}}
+  .about-body p{color:var(--ink-2);font-size:1.06rem}
+  .about-body p + p{margin-top:1.1rem}
+  .about-body strong{color:var(--ink);font-weight:600}
+
+  .coverage{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+    padding:8px 4px;box-shadow:var(--shadow-sm);
+  }
+  .coverage .cov-title{
+    font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-3);
+    padding:12px 16px 6px;
+  }
+  .cov-item{
+    display:flex;align-items:center;gap:11px;
+    padding:9px 16px;font-size:.95rem;
+    border-top:1px solid var(--line-2);
+  }
+  .cov-item .tick{color:var(--pass);font-family:"JetBrains Mono",monospace;font-weight:600;flex:none}
+  .cov-item span.pct{margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--pass);font-weight:600}
+
+  /* ---------- CAPABILITIES ---------- */
+  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.caps{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.caps{grid-template-columns:1fr}}
+  .cap{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+    padding:22px 22px 24px;box-shadow:var(--shadow-sm);
+    transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+  }
+  .cap:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--pass)}
+  .cap h3{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1.12rem;
+    letter-spacing:-.01em;margin-bottom:14px;display:flex;align-items:center;gap:9px;
+  }
+  .cap h3 .ix{
+    font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--pass);
+    background:var(--pass-2);padding:3px 7px;border-radius:6px;font-weight:600;
+  }
+  .cap ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .cap li{font-size:.92rem;color:var(--ink-2);display:flex;gap:9px;align-items:baseline}
+  .cap li::before{content:"·";color:var(--ink-3);flex:none}
+
+  /* ---------- EXPERIENCE (run log) ---------- */
+  .log{display:flex;flex-direction:column}
+  .entry{
+    display:grid;grid-template-columns:170px 1fr;gap:28px;
+    padding:28px 0;border-top:1px solid var(--line);
+  }
+  .entry:first-child{border-top:none}
+  @media(max-width:760px){.entry{grid-template-columns:1fr;gap:14px}}
+  .entry-meta{position:relative}
+  .entry-status{
+    font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:7px;
+    padding:4px 10px;border-radius:100px;
+  }
+  .st-pass{color:var(--pass);background:var(--pass-2)}
+  .st-run{color:var(--warn);background:var(--warn-2)}
+  .st-pass .sd,.st-run .sd{width:6px;height:6px;border-radius:50%;background:currentColor}
+  .st-run .sd{animation:pulse 1.8s ease-in-out infinite}
+  .entry-dates{font-family:"JetBrains Mono",monospace;font-size:.76rem;color:var(--ink-3);margin-top:10px}
+  .entry h3{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1.28rem;
+    letter-spacing:-.015em;
+  }
+  .entry .role{color:var(--ink-2);font-size:.98rem;margin-top:1px}
+  .entry .ctx{
+    font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--ink-3);
+    margin-top:6px;
+  }
+  .entry ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:9px}
+  .entry li{position:relative;padding-left:22px;color:var(--ink-2);font-size:.98rem}
+  .entry li::before{
+    content:"✓";position:absolute;left:0;top:0;
+    color:var(--pass);font-family:"JetBrains Mono",monospace;font-size:.82rem;font-weight:600;
+  }
+
+  /* ---------- IMPACT ---------- */
+  .impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:820px){.impact-grid{grid-template-columns:1fr}}
+  .imp{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+    padding:26px 24px;box-shadow:var(--shadow-sm);
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .imp .num{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+    font-size:clamp(2.4rem,5vw,3.1rem);line-height:1;letter-spacing:-.03em;
+    color:var(--ink);
+  }
+  .imp .num .u{color:var(--pass)}
+  .imp .lbl{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--pass);font-weight:600}
+  .imp p{color:var(--ink-2);font-size:.96rem}
+
+  /* ---------- WRITING ---------- */
+  .writing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:820px){.writing-grid{grid-template-columns:1fr}}
+  .post{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+    padding:24px 22px 22px;box-shadow:var(--shadow-sm);
+    display:flex;flex-direction:column;min-height:210px;
+    transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+  }
+  .post:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--pass)}
+  .post .date{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+  .post h3{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1.14rem;
+    letter-spacing:-.01em;line-height:1.24;margin:12px 0 10px;color:var(--ink);
+  }
+  .post p{color:var(--ink-2);font-size:.93rem;flex:1}
+  .post .read{
+    font-family:"JetBrains Mono",monospace;font-size:.76rem;color:var(--pass);font-weight:600;
+    margin-top:16px;display:inline-flex;align-items:center;gap:6px;transition:gap .2s ease;
+  }
+  .post:hover .read{gap:11px}
+
+  /* ---------- AI QUALITY ---------- */
+  .ai-lead{max-width:58ch}
+  .pipeline{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:14px;
+    margin:clamp(30px,4vw,44px) 0 clamp(28px,4vw,40px);
+  }
+  @media(max-width:900px){.pipeline{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.pipeline{grid-template-columns:1fr}}
+  .step{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-sm);
+    padding:18px 16px 20px;box-shadow:var(--shadow-sm);
+    transition:border-color .2s ease,transform .2s ease;
+  }
+  .step:hover{border-color:var(--pass);transform:translateY(-2px)}
+  .step .n{font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--pass);font-weight:600}
+  .step h4{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1rem;margin:9px 0 7px;letter-spacing:-.01em}
+  .step p{color:var(--ink-2);font-size:.85rem;line-height:1.5}
+
+  .evalcard{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow-md);overflow:hidden;max-width:740px;
+  }
+  .evalcard-bar{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:12px 16px;border-bottom:1px solid var(--line-2);background:var(--paper-3);
+  }
+  .evalcard-bar .file{font-family:"JetBrains Mono",monospace;font-size:.75rem;color:var(--ink-2)}
+  .run-btn{
+    font-family:"JetBrains Mono",monospace;font-size:.74rem;font-weight:600;
+    padding:7px 15px;border-radius:100px;border:1px solid var(--pass);
+    background:var(--pass);color:#fff;cursor:pointer;transition:transform .15s ease,opacity .15s ease;
+  }
+  .run-btn:hover{transform:translateY(-1px)}
+  .run-btn[disabled]{opacity:.5;cursor:default;transform:none}
+  .eval-body{padding:14px 16px 6px}
+  .metric{display:grid;grid-template-columns:168px 1fr 68px;gap:14px;align-items:center;padding:9px 0}
+  @media(max-width:560px){.metric{grid-template-columns:120px 1fr 54px;gap:10px}}
+  .metric .m-name{font-size:.9rem;color:var(--ink)}
+  .m-track{height:7px;background:var(--line-2);border-radius:100px;overflow:hidden}
+  .m-fill{height:100%;width:0;border-radius:100px;background:var(--pass)}
+  .m-fill.warn{background:var(--warn)}
+  .m-score{font-family:"JetBrains Mono",monospace;font-size:.82rem;font-weight:600;color:var(--ink-3);text-align:right}
+  .m-score.pass{color:var(--pass)}
+  .m-score.warn{color:var(--warn)}
+  .eval-foot{
+    border-top:1px solid var(--line-2);padding:13px 16px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+  .verdict{
+    font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:600;
+    padding:5px 13px;border-radius:100px;background:var(--line-2);color:var(--ink-2);
+  }
+  .verdict.pass{background:var(--pass-2);color:var(--pass)}
+  .verdict.running{background:var(--warn-2);color:var(--warn)}
+  .eval-foot .note{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--ink-3)}
+  .eval-caption{color:var(--ink-2);font-size:.92rem;margin-top:16px;max-width:62ch}
+  .eval-caption b{color:var(--ink);font-weight:600}
+
+  /* ---------- ORIGINS TIMELINE ---------- */
+  .timeline{position:relative;max-width:760px;margin-top:6px}
+  .timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:8px;width:2px;background:var(--line)}
+  .tl-item{position:relative;padding:0 0 30px 44px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-dot{
+    position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--pass);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .tl-dot::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--pass)}
+  .tl-when{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--pass);font-weight:600}
+  .tl-item h4{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1.14rem;letter-spacing:-.01em;margin:5px 0 7px}
+  .tl-item p{color:var(--ink-2);font-size:.97rem;max-width:58ch}
+
+  /* ---------- RECOGNITION + EDU ---------- */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px)}
+  @media(max-width:820px){.two-col{grid-template-columns:1fr;gap:44px}}
+  .rec-list{display:flex;flex-direction:column;gap:2px}
+  .rec{
+    display:flex;gap:14px;align-items:flex-start;
+    padding:16px 0;border-top:1px solid var(--line-2);
+  }
+  .rec:first-of-type{border-top:none}
+  .rec .badge{
+    font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:600;
+    color:var(--pass);background:var(--pass-2);border-radius:8px;
+    padding:6px 9px;flex:none;line-height:1;
+  }
+  .rec .rec-t{font-weight:600;color:var(--ink)}
+  .rec .rec-d{color:var(--ink-2);font-size:.95rem;margin-top:2px}
+
+  .edu-card{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+    padding:26px;box-shadow:var(--shadow-sm);
+  }
+  .edu-card + .edu-card{margin-top:16px}
+  .edu-top{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+  .edu-card h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1.16rem;letter-spacing:-.01em}
+  .edu-card .yrs{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--ink-3);flex:none}
+  .edu-card .deg{color:var(--ink-2);margin-top:4px;font-size:.98rem}
+  .edu-card .grade{
+    display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--pass);
+    background:var(--pass-2);padding:6px 12px;border-radius:100px;font-weight:600;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{border-top:1px solid var(--line);background:var(--paper-3)}
+  .contact-inner{text-align:center;max-width:640px;margin:0 auto}
+  .contact h2{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+    font-size:clamp(2.1rem,5vw,3.2rem);letter-spacing:-.025em;line-height:1.04;
+  }
+  .contact p{color:var(--ink-2);margin-top:1rem;font-size:1.08rem}
+  .contact-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:2rem}
+  .clink{
+    font-family:"JetBrains Mono",monospace;font-size:.85rem;
+    padding:12px 22px;border:1px solid var(--line);border-radius:100px;
+    background:var(--paper-2);display:inline-flex;align-items:center;gap:9px;
+    transition:transform .16s ease,border-color .18s ease,color .18s ease;
+  }
+  .clink:hover{border-color:var(--pass);color:var(--pass);transform:translateY(-2px)}
+  .clink .k{color:var(--ink-3)}
+
+  footer{border-top:1px solid var(--line);padding:28px 0}
+  .foot-inner{
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--ink-3);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition:none!important}
+    .assert,.reveal{opacity:1;transform:none}
+    .assert .check{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+  :focus-visible{outline:2px solid var(--pass);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="status-dot" aria-hidden="true"></span>pranav.kumar.sarma</a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#ai">ai</a>
+      <a href="#skills">skills</a>
+      <a href="#experience">experience</a>
+      <a href="#impact">impact</a>
+      <a href="#tools">tools</a>
+      <a href="#projects">projects</a>
+      <a href="#writing">writing</a>
+      <a href="#origins">origins</a>
+      <a href="#contact" class="nav-cta">get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<a id="top"></a>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Senior QA Engineer · AI &amp; LLM Quality</span>
+        <h1>Pranav Kumar<br>Sarma R.</h1>
+        <p class="tagline">8+ years testing enterprise systems, help desks, and CRMs. Today I build quality infrastructure for <em>AI systems that change every run.</em></p>
+        <p class="sub">8+ years testing everything from enterprise ERP, help desks, and CRMs to real-estate AI marketing engines: manual, automation, API, and LLM evaluation. ISTQB certified. Currently owning quality and prompt evaluation at an AI SaaS company.</p>
+        <div class="cta-row">
+          <a href="#experience" class="btn btn-primary">View experience →</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="runcard" role="img" aria-label="Career metrics shown as a passing test suite: 8+ years experience, 85% P0 coverage, 40% regression time reduction, 25+ production bugs prevented, 5+ AI agents evaluated, 9 engineers mentored.">
+        <div class="runcard-bar">
+          <span class="runcard-file">
+            <span class="dot-cluster" aria-hidden="true"><i></i><i></i><i></i></span>
+            career.test.js
+          </span>
+          <span class="pass-pill" id="passPill">running…</span>
+        </div>
+        <div class="runcard-body" id="assertBody">
+          <div class="assert"><span class="check">✓</span><span class="code"><b>expect</b>(experience)<span>.toBeGreaterThan(</span><span class="val">'8 years'</span>)</span></div>
+          <div class="assert"><span class="check">✓</span><span class="code"><b>expect</b>(p0Coverage)<span>.toBeAtLeast(</span><span class="val">0.85</span>)</span></div>
+          <div class="assert"><span class="check">✓</span><span class="code"><b>expect</b>(regressionTime)<span>.toHaveDropped(</span><span class="val">'40%'</span>)</span></div>
+          <div class="assert"><span class="check">✓</span><span class="code"><b>expect</b>(productionBugs.prevented)<span>.toBe(</span><span class="val">'25+'</span>)</span></div>
+          <div class="assert"><span class="check">✓</span><span class="code"><b>expect</b>(aiAgents.evaluated)<span>.toBe(</span><span class="val">'5+'</span>)</span></div>
+          <div class="assert"><span class="check">✓</span><span class="code"><b>expect</b>(engineers.mentored)<span>.toBe(</span><span class="val">9</span>)</span></div>
+        </div>
+        <div class="runcard-foot">
+          <span>Tests: <b>6 passed</b>, 0 failed</span>
+          <span>Time: 8+ yrs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">01 · About</span>
+      <h2 class="head">Worked on everything. That's the point.</h2>
+    </div>
+    <div class="about-body">
+      <div class="reveal">
+        <p>I started in enterprise ERP and worked my way through web, API, and full test-automation architecture. These days I spend most of my time evaluating <strong>AI agents that behave differently every time you run them</strong>, designing prompt evaluations, golden datasets, and observability for systems that don't have a single "correct" output.</p>
+        <p>Testing everything was never scattered. It forced me to think end to end: from selector reliability to agent hallucination to release gates. I review code quality alongside test strategy, think like a user while testing, and automate with intention—not everything, just what matters. I build signal, not noise. Mentored 9 QA engineers into senior roles who now lead automation and AI testing at their companies.</p>
+      </div>
+      <div class="coverage reveal" aria-label="Areas of coverage">
+        <div class="cov-title">Coverage report</div>
+        <div class="cov-item"><span class="tick">✓</span>Manual &amp; exploratory testing<span class="pct">100%</span></div>
+        <div class="cov-item"><span class="tick">✓</span>Test automation architecture<span class="pct">100%</span></div>
+        <div class="cov-item"><span class="tick">✓</span>API &amp; backend testing<span class="pct">100%</span></div>
+        <div class="cov-item"><span class="tick">✓</span>AI / LLM agent evaluation<span class="pct">100%</span></div>
+        <div class="cov-item"><span class="tick">✓</span>Release &amp; incident management<span class="pct">100%</span></div>
+        <div class="cov-item"><span class="tick">✓</span>CI/CD &amp; observability<span class="pct">100%</span></div>
+        <div class="cov-item"><span class="tick">✓</span>Team mentoring &amp; QA strategy<span class="pct">100%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">02 · AI Quality</span>
+      <h2 class="head">Testing AI that doesn't behave.</h2>
+      <p class="lede ai-lead">Traditional QA checks that button X does action Y. AI agents change their output every run. Testing them means building evaluation infrastructure, not checklists: golden datasets, LLM-as-judge scoring, and observability that catches quality drift before it ships.</p>
+    </div>
+
+    <div class="pipeline reveal">
+      <div class="step"><span class="n">01</span><h4>Golden datasets</h4><p>Curate real production failures and edge cases into a frozen evaluation set.</p></div>
+      <div class="step"><span class="n">02</span><h4>Multi-turn &amp; adversarial</h4><p>Push agents through multi-turn flows and deliberate edge-case prompts.</p></div>
+      <div class="step"><span class="n">03</span><h4>LLM-as-judge</h4><p>Score non-deterministic output on faithfulness, grounding, and tool use.</p></div>
+      <div class="step"><span class="n">04</span><h4>Observability</h4><p>Trace every run in Langfuse and Oodle; watch for quality drift over time.</p></div>
+      <div class="step"><span class="n">05</span><h4>Regression gates</h4><p>Block prompt changes that quietly regress quality before they ship.</p></div>
+    </div>
+
+    <div class="evalcard reveal" id="evalcard">
+      <div class="evalcard-bar">
+        <span class="file">agent_eval.run · golden_set.jsonl</span>
+        <button class="run-btn" id="runEval" aria-label="Run the sample AI evaluation">▶ Run evaluation</button>
+      </div>
+      <div class="eval-body" id="evalBody">
+        <div class="metric" data-target="94" data-verdict="pass"><span class="m-name">Faithfulness</span><div class="m-track"><div class="m-fill"></div></div><span class="m-score">-</span></div>
+        <div class="metric" data-target="91" data-verdict="pass"><span class="m-name">Context grounding</span><div class="m-track"><div class="m-fill"></div></div><span class="m-score">-</span></div>
+        <div class="metric" data-target="97" data-verdict="pass"><span class="m-name">Tool-use accuracy</span><div class="m-track"><div class="m-fill"></div></div><span class="m-score">-</span></div>
+        <div class="metric" data-target="95" data-verdict="pass"><span class="m-name">Instruction adherence</span><div class="m-track"><div class="m-fill"></div></div><span class="m-score">-</span></div>
+        <div class="metric" data-target="96" data-verdict="pass"><span class="m-name">Hallucination guard</span><div class="m-track"><div class="m-fill"></div></div><span class="m-score">-</span></div>
+        <div class="metric" data-target="82" data-verdict="warn"><span class="m-name">Refusal calibration</span><div class="m-track"><div class="m-fill"></div></div><span class="m-score">-</span></div>
+      </div>
+      <div class="eval-foot">
+        <span class="verdict" id="evalVerdict">Awaiting run</span>
+        <span class="note" id="evalNote">220 golden cases</span>
+      </div>
+    </div>
+    <p class="eval-caption reveal">A live, simulated eval. Hit <b>Run</b>. Five metrics pass; refusal calibration flags for review. That flag <b>is the point</b>: a good eval surfaces the regression before your users ever meet it.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">03 · Capabilities</span>
+      <h2 class="head">The full quality stack.</h2>
+      <p class="lede">Grouped by where it lives in the pipeline, not a tag cloud.</p>
+    </div>
+    <div class="caps">
+      <div class="cap reveal">
+        <h3><span class="ix">AI</span>AI &amp; LLM Quality</h3>
+        <ul>
+          <li>Prompt &amp; agent evaluation</li>
+          <li>Golden-dataset methodology</li>
+          <li>RAG &amp; LangGraph testing</li>
+          <li>Langfuse · Promptfoo · Oodle</li>
+          <li>Playwright MCP · BrowserUse</li>
+          <li>AWS Bedrock · LLM observability</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <h3><span class="ix">E2E</span>Test Automation</h3>
+        <ul>
+          <li>WebdriverIO · Playwright · Selenium</li>
+          <li>Pytest · Mocha · TestNG</li>
+          <li>Page Object Model</li>
+          <li>~85% P0 flow coverage</li>
+          <li>Flaky-job triage &amp; suite health</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <h3><span class="ix">API</span>API &amp; Backend</h3>
+        <ul>
+          <li>REST API testing</li>
+          <li>Postman · Telerik Fiddler</li>
+          <li>Pytest + requests</li>
+          <li>Database testing</li>
+          <li>OAuth 2.0 · integrations</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <h3><span class="ix">OPS</span>CI/CD &amp; Infra</h3>
+        <ul>
+          <li>Jenkins · GitHub Actions</li>
+          <li>AWS CodePipeline / CodeDeploy</li>
+          <li>Kubernetes · ArgoCD</li>
+          <li>Datadog · Kibana</li>
+          <li>Release management &amp; feature flags</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <h3><span class="ix">DOM</span>Product Domains</h3>
+        <ul>
+          <li>CRM: Salesforce, HubSpot, NetSuite</li>
+          <li>CRM: Pipedrive, Copper</li>
+          <li>E-commerce: Shopify, WooCommerce</li>
+          <li>Real-estate platforms</li>
+          <li>Enterprise ERP systems</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <h3><span class="ix">LEAD</span>Strategy &amp; Mentorship</h3>
+        <ul>
+          <li>QA strategy and metrics in Agile teams</li>
+          <li>Building and mentoring QA leaders</li>
+          <li>Code review and test strategy alignment</li>
+          <li>Strategic test automation: signal over noise</li>
+          <li>User-centric testing and exploratory approach</li>
+          <li>ISTQB certified, NIIT Java certified</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">05 · Tools & Frameworks</span>
+      <h2 class="head">Learning by doing.</h2>
+      <p class="lede">Every framework I've worked with came from building something real with it, not tutorials.</p>
+    </div>
+    <div class="reveal" style="max-width:720px;display:grid;grid-template-columns:1fr;gap:24px">
+      <div style="background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:26px">
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.14rem;margin-bottom:12px;letter-spacing:-.01em">Browser automation: Puppeteer, Playwright, WebdriverIO</h3>
+        <p style="color:var(--ink-2);font-size:.98rem;line-height:1.6">Tested all three through production POCs. Playwright won for speed and reliability; I use WebdriverIO for its architecture and CI/CD integration. Every suite is wired to post results to Slack channels for real-time team visibility.</p>
+      </div>
+      <div style="background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:26px">
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.14rem;margin-bottom:12px;letter-spacing:-.01em">AI-powered test generation: BrowserUse + WebUI, PlaywrightMCP</h3>
+        <p style="color:var(--ink-2);font-size:.98rem;line-height:1.6">Built POCs where English-language test descriptions become automated scripts. Tested both frameworks; they excel for rapid prototyping and regression suites on familiar flows.</p>
+      </div>
+      <div style="background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:26px">
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.14rem;margin-bottom:12px;letter-spacing:-.01em">The POC approach</h3>
+        <p style="color:var(--ink-2);font-size:.98rem;line-height:1.6">I don't wait to be an expert before shipping. I build a small POC with every tool worth considering, measure it against my current stack, and iterate. This is why I can move fast between frameworks and pick the right one for the job.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">05 · Experience</span>
+      <h2 class="head">Run log.</h2>
+      <p class="lede">Nine years of shipping quality across ERP, SaaS, and AI. One suite still running.</p>
+    </div>
+    <div class="log">
+
+      <article class="entry reveal">
+        <div class="entry-meta">
+          <span class="entry-status st-run"><span class="sd"></span>In progress</span>
+          <div class="entry-dates">Feb 2026 - Present</div>
+        </div>
+        <div>
+          <h3>Fello.ai</h3>
+          <div class="role">Senior QA Engineer · Remote</div>
+          <div class="ctx">AI-powered marketing engine for real-estate teams</div>
+          <ul>
+            <li>Designed and ran prompt evaluation for 5+ production AI agents using Langfuse and Claude + Promptfoo, covering multi-turn flows and edge-case failure modes.</li>
+            <li>Built evaluation datasets with golden-dataset methodology and structured Langfuse experiments, surfacing prompt-regression risk early in the dev cycle.</li>
+            <li>Validated AI voice-calling and texting flows end to end, with full agent observability in Langfuse and Oodle.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-meta">
+          <span class="entry-status st-pass"><span class="sd"></span>Passed</span>
+          <div class="entry-dates">Feb 2022 - Feb 2026</div>
+        </div>
+        <div>
+          <h3>Hiver</h3>
+          <div class="role">Senior QA Engineer · Remote</div>
+          <div class="ctx">Gmail-based multi-channel customer-service platform</div>
+          <ul>
+            <li>Owned end-to-end release management across the feature lifecycle: feature flags, EA &amp; GA rollouts, deployment oversight, and production incident resolution with DevOps.</li>
+            <li>Key contributor to the Hiver-Chat, WhatsApp, and Aircall integrations, three launches that anchored the multi-channel expansion behind 2× ARR growth.</li>
+            <li>Built a WebdriverIO suite covering ~85% of core P0 flows (Slack, Jenkins, Opsgenie), cutting regression time 40%; complemented by Pytest API tests.</li>
+            <li>Monitored production via Datadog &amp; Kibana; mentored a team of 9 QA engineers in automation, AI tooling, and quality best practices.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-meta">
+          <span class="entry-status st-pass"><span class="sd"></span>Passed</span>
+          <div class="entry-dates">Feb 2021 - Feb 2022</div>
+        </div>
+        <div>
+          <h3>Hiver</h3>
+          <div class="role">QA Engineer · Remote</div>
+          <div class="ctx">Automation modernization</div>
+          <ul>
+            <li>Migrated the legacy automation suite from Selenium / Java / TestNG to WebdriverIO, modernizing the QA infrastructure ahead of team-wide adoption.</li>
+            <li>Ran end-to-end testing across releases and managed release cycles independently, ensuring quality gates were met before deployment.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-meta">
+          <span class="entry-status st-pass"><span class="sd"></span>Passed</span>
+          <div class="entry-dates">Jul 2017 - Sep 2020</div>
+        </div>
+        <div>
+          <h3>Works Applications</h3>
+          <div class="role">Junior Engineer · Chennai</div>
+          <div class="ctx">Business-critical ERP systems</div>
+          <ul>
+            <li>Owned test planning, spec writing from PM requirements, and end-to-end testing for ERP modules including Order and Supply Management.</li>
+            <li>Ran API testing, security testing, and design reviews; built automation using internal tooling.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">06 · Impact</span>
+      <h2 class="head">Work that shipped.</h2>
+    </div>
+    <div class="reveal" style="max-width:680px">
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+        <li style="color:var(--ink-2);font-size:1rem;padding-left:28px;position:relative"><span style="position:absolute;left:0;color:var(--pass);font-weight:600">✓</span>Helped launch Hiver's Chat, WhatsApp, and Aircall integrations, three features that anchored a multi-channel platform expansion and contributed to 2x ARR growth.</li>
+        <li style="color:var(--ink-2);font-size:1rem;padding-left:28px;position:relative"><span style="position:absolute;left:0;color:var(--pass);font-weight:600">✓</span>Designed and owned a WebdriverIO automation suite covering ~85% of P0 flows, wired into Slack, Jenkins, and Opsgenie, reducing regression testing time by 40%.</li>
+        <li style="color:var(--ink-2);font-size:1rem;padding-left:28px;position:relative"><span style="position:absolute;left:0;color:var(--pass);font-weight:600">✓</span>Prevented 25+ high-impact production bugs through early automation detection before they reached users.</li>
+        <li style="color:var(--ink-2);font-size:1rem;padding-left:28px;position:relative"><span style="position:absolute;left:0;color:var(--pass);font-weight:600">✓</span>Designed and executed prompt evaluation for 5+ production AI agents at Fello.ai using Langfuse and Promptfoo, covering multi-turn flows and edge-case failure modes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="writing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">07 · Writing</span>
+      <h2 class="head">Notes from the test lab.</h2>
+      <p class="lede">Public writing on AI-assisted QA, evaluation, and what "coverage" really means.</p>
+    </div>
+    <div class="writing-grid">
+      <a class="post reveal" href="https://medium.com/@pranavkumarsharma/the-era-of-autonomous-browser-assistants-492fc364b1f1" target="_blank" rel="noopener">
+        <span class="date">Nov 2025</span>
+        <h3>Have your own QA assistants: AI browsers</h3>
+        <p>How browser-based, autonomous digital assistants are reshaping day-to-day software quality assurance.</p>
+        <span class="read">Read on Medium →</span>
+      </a>
+      <a class="post reveal" href="https://medium.com/@pranavkumarsharma/ai-workflow-for-your-flaky-automation-tests-%EF%B8%8F-0faca9f46032" target="_blank" rel="noopener">
+        <span class="date">Dec 2025</span>
+        <h3>An AI workflow for your flaky automation tests</h3>
+        <p>A practical, AI-assisted loop for triaging and fixing the flaky tests that quietly erode suite trust.</p>
+        <span class="read">Read on Medium →</span>
+      </a>
+      <a class="post reveal" href="https://medium.com/@pranavkumarsharma/rethinking-automation-coverage-quality-over-quantity-e3011ada90c8" target="_blank" rel="noopener">
+        <span class="date">Dec 2025</span>
+        <h3>Rethinking automation coverage %: quality over quantity</h3>
+        <p>Why the coverage number every QA team chases can be the wrong thing to optimize for.</p>
+        <span class="read">Read on Medium →</span>
+      </a>
+    </div>
+    <div class="reveal" style="margin-top:26px">
+      <a class="btn btn-ghost" href="https://medium.com/@pranavkumarsharma" target="_blank" rel="noopener">All writing on Medium →</a>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">08 · Featured Project</span>
+      <h2 class="head">Eval Studio.</h2>
+      <p class="lede">A lightweight UI wrapper for Promptfoo designed to speed up prompt iteration and agent testing.</p>
+    </div>
+    <div class="reveal" style="max-width:720px">
+      <div style="background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.14rem;margin-bottom:10px;letter-spacing:-.01em">What it does</h3>
+          <p style="color:var(--ink-2);font-size:.98rem;line-height:1.6">Run multi-turn conversational AI prompts and agentic workflows against any model. Configure cases, select your LLM, and execute. Built for teams that need to iterate on prompts fast without learning Promptfoo's CLI.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.14rem;margin-bottom:10px;letter-spacing:-.01em">Why I built it</h3>
+          <p style="color:var(--ink-2);font-size:.98rem;line-height:1.6">Evaluation harnesses work best when the whole team can run them, not just the engineer who built the YAML. This is the bridge.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r-sm);padding:16px">
+          <a href="https://eval-studio-gqhy.onrender.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--pass);font-weight:600;text-decoration:none;transition:gap .2s ease">
+            Launch → eval-studio-gqhy.onrender.com
+            <span style="opacity:.6">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="origins">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">09 · Origins</span>
+      <h2 class="head">How I learned to learn fast.</h2>
+      <p class="lede">From floppy disks to AI evals, the thread is the same: pick it up quick, go deep, move on.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-when">Karur</div>
+        <h4>Chettinad Rani Meyyammai Matriculation School</h4>
+        <p>Foundational years. Nothing special yet, just a kid in a town with computers nearby.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-when">Early exposure</div>
+        <h4>My uncle's computer center, floppy-disk era</h4>
+        <p>This changed everything. I had access. While most kids were outside, I was typing A: at the prompt, booting systems, loading Dangerous Dave and other games. Understood hardware at a level most never touch. Early proof that I'd figure things out if I had the space to do it.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-when">5th grade</div>
+        <h4>Ez Vidya, rapid-fire tool acquisition</h4>
+        <p>By now I was learning Macromedia Flash, Adobe Photoshop, BASIC, C, C++, and HTML. Not fluent in each, but functional. The pattern became clear: tools are learnable. Languages matter less than thinking. Design, logic, markup—same concepts, different syntax.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-when">Grades 11 & 12</div>
+        <h4>Computer Science, 199/200</h4>
+        <p>Went deep on Java and object-oriented design. This was where the pattern solidified: understand the underlying concepts, and you can pick up any language. Scored 199 out of 200.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-when">NIIT</div>
+        <h4>Advanced Java, Selenium, automation</h4>
+        <p>Official training in programming fundamentals and automated testing. By May 2017, certified in both.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-when">Bachelor's</div>
+        <h4>Computer Science &amp; Engineering</h4>
+        <p>Formalized what I'd already learned through practice.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-when">Career</div>
+        <h4>Every new tool via POCs</h4>
+        <p>Applied the same principle that worked as a kid: try it, build something real, decide if it's worth going deeper. WebdriverIO, Playwright, Langfuse, Promptfoo, BrowserUse. Same pattern. Same outcome. I stay dangerous across the full stack because I learned to learn before I learned to code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recognition">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="sec-head reveal" style="margin-bottom:28px">
+          <span class="eyebrow">10 · Recognition</span>
+          <h2 class="head">On the record.</h2>
+        </div>
+        <div class="rec-list reveal">
+          <div class="rec">
+            <span class="badge">×3</span>
+            <div>
+              <div class="rec-t">'Driving Success' Award</div>
+              <div class="rec-d">Won three times for outstanding contribution, impact, and leadership.</div>
+            </div>
+          </div>
+          <div class="rec">
+            <span class="badge">WIN</span>
+            <div>
+              <div class="rec-t">Hackathon &amp; Bugathon champion</div>
+              <div class="rec-d">Won both company-wide competitive engineering events.</div>
+            </div>
+          </div>
+          <div class="rec">
+            <span class="badge">CERT</span>
+            <div>
+              <div class="rec-t">NIIT Certified - Advanced Java Programming</div>
+              <div class="rec-d">Programming with Java, Advanced programming with Java (May 2017). Covers Selenium and Automated Software Testing.</div>
+            </div>
+          </div>
+          <div class="rec">
+            <span class="badge">CERT</span>
+            <div>
+              <div class="rec-t">ISTQB Certified</div>
+              <div class="rec-d">Certified Tester, Foundation Level (CTFL). Aug 2024.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-head reveal" style="margin-bottom:28px">
+          <span class="eyebrow">11 · Education</span>
+          <h2 class="head">Foundations.</h2>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <h3>Adhiyamaan College of Engineering</h3>
+            <span class="yrs">2013 - 2017</span>
+          </div>
+          <div class="deg">B.E., Computer Engineering · Hosur, Tamil Nadu</div>
+          <span class="grade">✓ 8.47 CGPA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-inner reveal">
+      <span class="eyebrow" style="justify-content:center">Status: available</span>
+      <h2>Let's ship quality AI together.</h2>
+      <p>I'm open to senior QA engineering, SDET, applied AI engineer, and AI evaluation roles at companies shipping AI products. Remote, global. If you're hiring for a team that has to get AI right, let's talk.</p>
+      <div class="contact-links">
+        <a class="clink" href="mailto:mngsharma@gmail.com"><span class="k">email</span> mngsharma@gmail.com</a>
+        <a class="clink" href="tel:+918870217687"><span class="k">phone</span> +91 887 0217 687</a>
+        <a class="clink" href="https://www.linkedin.com/in/pranav-kumar-sarma/" target="_blank" rel="noopener"><span class="k">linkedin</span> /in/pranav-kumar-sarma</a>
+        <a class="clink" href="https://github.com/pranavkumarsarma" target="_blank" rel="noopener"><span class="k">github</span> @pranavkumarsarma</a>
+        <a class="clink" href="https://medium.com/@pranavkumarsharma" target="_blank" rel="noopener"><span class="k">medium</span> @pranavkumarsharma</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <span>© 2026 Pranav Kumar Sarma R.</span>
+      <span>Tamil Nadu, India · Remote worldwide</span>
+      <span>All tests passing ✓</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hero suite "runs" on load
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var asserts = document.querySelectorAll('#assertBody .assert');
+    var pill = document.getElementById('passPill');
+    if(reduce){
+      asserts.forEach(function(a){a.classList.add('in')});
+      pill.textContent = '6 passed';
+      return;
+    }
+    asserts.forEach(function(a,i){
+      setTimeout(function(){ a.classList.add('in'); }, 260 + i*230);
+    });
+    setTimeout(function(){ pill.textContent = '6 passed'; }, 260 + asserts.length*230 + 200);
+  })();
+
+  // Scroll reveal
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){
+      items.forEach(function(el){el.classList.add('in')});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){io.observe(el)});
+  })();
+
+  // Interactive AI eval scorecard
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var card = document.getElementById('evalcard');
+    if(!card) return;
+    var btn = document.getElementById('runEval');
+    var verdict = document.getElementById('evalVerdict');
+    var note = document.getElementById('evalNote');
+    var metrics = card.querySelectorAll('.metric');
+    var ran = false;
+
+    function reset(){
+      verdict.className = 'verdict running';
+      verdict.textContent = 'running…';
+      note.textContent = 'scoring 220 cases…';
+      metrics.forEach(function(m){
+        var fill = m.querySelector('.m-fill'), score = m.querySelector('.m-score');
+        fill.style.transition = 'none';
+        fill.style.width = '0%';
+        fill.classList.remove('warn');
+        score.textContent = '-';
+        score.className = 'm-score';
+      });
+    }
+
+    function finish(){
+      verdict.className = 'verdict pass';
+      verdict.textContent = 'PASS';
+      note.textContent = '5 passed · 1 flagged · 220 cases';
+      btn.textContent = '↻ Re-run';
+      btn.disabled = false;
+    }
+
+    function paint(m){
+      var t = +m.dataset.target, v = m.dataset.verdict;
+      var fill = m.querySelector('.m-fill'), score = m.querySelector('.m-score');
+      fill.style.width = t + '%';
+      if(v === 'warn') fill.classList.add('warn');
+      score.textContent = (t/100).toFixed(2);
+      score.classList.add(v);
+    }
+
+    function run(){
+      ran = true;
+      btn.disabled = true;
+      reset();
+      if(reduce){
+        metrics.forEach(paint);
+        finish();
+        return;
+      }
+      void card.offsetWidth; // reflow
+      metrics.forEach(function(m, i){
+        var t = +m.dataset.target, v = m.dataset.verdict;
+        var fill = m.querySelector('.m-fill'), score = m.querySelector('.m-score');
+        setTimeout(function(){
+          fill.style.transition = 'width .8s cubic-bezier(.2,.7,.2,1)';
+          fill.style.width = t + '%';
+          if(v === 'warn') fill.classList.add('warn');
+          var start = null;
+          function tick(ts){
+            if(!start) start = ts;
+            var p = Math.min((ts - start) / 780, 1);
+            score.textContent = ((t * p) / 100).toFixed(2);
+            if(p < 1){ requestAnimationFrame(tick); }
+            else { score.textContent = (t/100).toFixed(2); score.classList.add(v); }
+          }
+          requestAnimationFrame(tick);
+        }, 240 + i * 260);
+      });
+      setTimeout(finish, 240 + metrics.length * 260 + 520);
+    }
+
+    btn.addEventListener('click', run);
+
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting && !ran){ run(); io.unobserve(e.target); }
+        });
+      }, {threshold:.4});
+      io.observe(card);
+    }
+  })();
+
+  // In-page navigation: smooth scroll with sticky-nav offset (reliable inside sandboxed previews too)
+  (function(){
+    var nav = document.querySelector('nav');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('a[href^="#"]').forEach(function(link){
+      link.addEventListener('click', function(e){
+        var id = link.getAttribute('href');
+        if(!id || id === '#' || id === '#top'){
+          if(id === '#top'){
+            e.preventDefault();
+            window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+          }
+          return;
+        }
+        var target = document.querySelector(id);
+        if(!target) return;
+        e.preventDefault();
+        var navH = nav ? nav.offsetHeight : 0;
+        var y = target.getBoundingClientRect().top + window.pageYOffset - navH - 10;
+        window.scrollTo({top: y, behavior: reduce ? 'auto' : 'smooth'});
+        try { if(history.pushState) history.pushState(null, '', id); } catch(err){}
+      });
+    });
+  })();
+</script>
+</body>
+</html>
